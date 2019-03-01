@@ -16,6 +16,8 @@ public class SpringBootAtmosphereApplication {
     @Bean
     public ServletRegistrationBean<AtmosphereServlet> atmosphereServlet() {
         // "ws://localhost:8080/test"
-        return new ServletRegistrationBean<>(new AtmosphereServlet(), "/test/*");
+        ServletRegistrationBean<AtmosphereServlet> servlet = new ServletRegistrationBean<>(new AtmosphereServlet(), "/test/*");
+        servlet.addInitParameter("org.atmosphere.interceptor.HeartbeatInterceptor.clientHeartbeatFrequencyInSeconds", "1");
+        return servlet;
     }
 }
