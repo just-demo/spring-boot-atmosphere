@@ -18,6 +18,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.atmosphere:atmosphere-runtime:2.5.2'
 	implementation 'org.atmosphere:wasync:2.1.5'
+	implementation 'org.eclipse.jetty.websocket:websocket-client:9.4.14.v20181114'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

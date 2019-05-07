@@ -1,4 +1,4 @@
-package self.ed.springbootatmosphere;
+package self.ed.springbootatmosphere.client;
 
 import org.atmosphere.wasync.*;
 
