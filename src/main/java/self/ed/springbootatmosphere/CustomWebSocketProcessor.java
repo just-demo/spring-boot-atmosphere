@@ -11,8 +11,8 @@ public class CustomWebSocketProcessor extends DefaultWebSocketProcessor {
     public static final String CLOSE_CODE_ATTRIBUTE = CustomWebSocketProcessor.class.getSimpleName() + ".close.code";
 
     @Override
-    public void executeClose(WebSocket webSocket, int closeCode) {
+    public void close(WebSocket webSocket, int closeCode) {
         webSocket.resource().getRequest().setAttribute(CLOSE_CODE_ATTRIBUTE, closeCode);
-        super.executeClose(webSocket, closeCode);
+        super.close(webSocket, closeCode);
     }
 }
